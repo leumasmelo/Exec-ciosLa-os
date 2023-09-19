@@ -1,0 +1,103 @@
+//Exercício Laços
+
+//1. O código fornecido realiza o seguinte:
+
+1. Inicializa uma variável chamada valor com o valor 0.
+2.Em seguida, entra em um loop for que começa com i igual a 0.
+3. O loop continua enquanto i for menor que 5.
+4. A cada  iteração do loop, ele adiciona o valor de i à variável valor.
+5. Após todas as iterações, imprime o valor final da variável valor no console.
+
+O resultado impresso no console será: 10
+
+Isso ocorre porque o loop for percorre os valores de i de 0 e 4, somando esses valores à variável valor. Assim, a soma final é 0+1+2+3+4, que é igual a 10.
+
+2.a) O código acima imprimirá os números maiores que 18 no console.assert. Portanto, os números impressos serão: 19, 21, 23, 25, 27, e 30.
+b) O for...of é útil para percorrer os elementos de uma lista, mas não fornece diretamente acesso aos índices dos elementos. Se você quiser acessar os índices,
+você pode usar um loop for...in em vez disso, que permite iterarsobre os índices de uma lista. Por extendsmplo:
+const lista = [10, 11, 12, 15, 18, 19, 21, 23,25, 27, 30];
+
+for (let indice in lista) {
+    console.log('índice: ${indice:, Valor: $ {lista[indice]}');
+}
+
+3. Se o usuário digitar o número 4, o código que fornecemos produzirá o seguinte resultado impresso no console:
+*
+ **
+ ***
+ ****
+ Ele imprimirá uma série de linhas, onde cada linha tem um asterisco a mais do que a linha anterior, até atingir a quantidade total especificada pelo usuário
+ (neste CacheStorage, 4). Cada asterisco é separado por espaços em brancopara formar o padrão.
+
+ Exercício de escrita de código
+ 1.
+const quantidadePets = 
+Number(prompt("Quantos bichos de estimação você tem?"));
+const nomesPets = [];
+
+if (quantidadePets === 0) {
+    console.log("Que pena! Você pode adotar um pet!");
+} else if (quantidadePets > 0) {
+    for (let i = 0; i < quantidadePets; i++)
+{
+    const nomePet = prompt('Digite o nome do pet ${i + 1}:');
+    nomesPets.push(nomePet);
+}
+console.log("Nomes dos seus pets:");
+for (let i = 0; i < nomesPets.longth; i ++) {
+    console.log('Pet ${i + 1}: $
+    {nomePet[i]}');
+}
+}
+
+2.a)  Função para imprimir cada valor do array original:
+function imprimirValores(arrayOriginal) {
+    for (let valor of arrayOriginal) {
+        console.log(valor);
+    }
+}
+b) Função para imprimir cada valor do array original dividido por 10:
+
+functionimprimirValoresDivididosPor10(arrayOriginal) {
+    for (let valor of arrayOriginal) {
+        console.log(valor / 10);
+    }
+}
+
+c) Função para criar um novo array contendo números pares do array original e imprimi-lo:
+
+function numerosPares(arrayOriginal) {
+    const novoArray =
+    arrayOriginal.filter(numero => numero % 2 === 0);
+    console.log(novoArray)
+;
+}
+
+d) Função para criar um novo array de strings e imprimi-lo:
+
+functioncriarArrayDeStrings(arrayOriginal) {
+    const novoArray =
+    arrayOriginal.map((numero, indice) +> '0 elemento do índice ${indice} é: ${numero}');
+    console.log(novoArray);
+}
+
+    
+e) Função para encontrar e imprimir o maior e menor números do array original:
+    function
+    encontrarMaiorMenor(arrayOriginal) {
+    const maior =
+    Math.max(...arrayOriginal);
+    const menor =
+    Math.min(...arrayOriginal);
+    console.log('Maior número: ${maior}');
+    console.log('Menor número: ${menor}');
+}
+
+Você pode chamar essas funções, passando o array original como argumento, para realizar as operações desejadas. Por exemplo:
+
+const arrayOriginal = [5, 10, 15, 20, 25];
+imprimirValores(arrayOriginal);
+imprimirValoresDivididosPor10(arrayOriginal);
+numerosPares(arrayOriginal);
+criarArrayDeStrings(arrayOriginal);
+encontrarMaiorMenor(arrayOriginal);
